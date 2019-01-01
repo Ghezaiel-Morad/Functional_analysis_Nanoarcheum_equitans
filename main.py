@@ -1,4 +1,4 @@
-from lib import get_file,setup,getCOGpval, getCOGfunction, getinfoNCBI, get_best_hit
+from lib import get_file, setup,getCOGpval, getCOGfunction, getinfoNCBI, get_best_hit
 from matplotlib_venn import venn3,venn3_circles
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -31,7 +31,7 @@ if __name__ == '__main__':
         NR_accession = getinfoNCBI(get_file(files[answer2]))
 
 
-        # P-values and functional annotations are pulled with their respective accession number
+        # Now we pull functional annotations from 3 querying methods
         HMMset = [i[0] for i in HMM_function]
         DIAMONDset =[i[0] for i in DIAMOND_function]
         NRset = [i[0] for i in NR_accession]
